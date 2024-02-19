@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "unordered_map": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "queue": "cpp",
+        "map": "cpp",
+        "string": "cpp",
+        "cmath": "cpp"
     }
 }
