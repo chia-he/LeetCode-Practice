@@ -1,2 +1,2 @@
-# -
-Record of the leetcode practice.
+# Leetcode Practice
+Record of LeetCode practice.
