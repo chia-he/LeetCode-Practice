@@ -5,6 +5,9 @@
         "queue": "cpp",
         "map": "cpp",
         "string": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "vector": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp"
     }
 }
