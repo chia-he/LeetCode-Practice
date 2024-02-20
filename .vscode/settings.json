@@ -7,7 +7,12 @@
         "string": "cpp",
         "cmath": "cpp",
         "vector": "cpp",
-        "ostream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "deque": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "ostream": "cpp"
     }
 }
