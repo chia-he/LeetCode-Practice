@@ -2,7 +2,7 @@
     1. Track visited nodes.
         Time complexity: O(n), Space complexity: O(n)
     2. Floyd's Cycle-Finding Algorithm.
-        Time: O(n), Space: O(1)
+        Time complexity: O(n), Space complexity: O(1)
 */
 
 #include <iostream>
@@ -50,7 +50,7 @@ Return true if there is a cycle in the linked list. Otherwise, return false.
 */
 /*
 Constraints:
-    1.  The number of the nodes in the list is in the range [0, 104].
+    1.  The number of the nodes in the list is in the range [0, 10^4].
     2.  -10^5 <= Node.val <= 10^5
     3.  pos is -1 or a valid index in the linked-list.
 */
