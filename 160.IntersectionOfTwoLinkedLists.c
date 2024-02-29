@@ -1,7 +1,10 @@
 /*
     1. hash map
         Time complexity: O(m+n), Space complexity: O(m+n)
-    2. brute force
+    2. brute force: align both list and compare
+        Time complexity: O(m+n), Space complexity: O(1)
+    3. not need to hnow the length (Nice Algo. , but I have no idea how to explain it)
+        Time complexity: O(m+n), Space complexity: O(1)
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,38 +16,18 @@ struct ListNode {
 
 struct ListNode *getIntersectionNode(struct ListNode *headA,
                                      struct ListNode *headB) {
-    int lengthA = 0, lengthB = 0;
-    struct ListNode *current = headA;
-    while (current) {
-        lengthA++;
-        current = current->next;
-    }
-    current = headB;
-    while (current) {
-        lengthB++;
-        current = current->next;
-    }
-    if (lengthA > lengthB) {
-        int skip = lengthA - lengthB;
-        while (skip > 0) {
-            headA = headA->next;
-            skip--;
-        }
-    } else {
-        int skip = lengthB - lengthA;
-        while (skip > 0) {
-            headB = headB->next;
-            skip--;
-        }
-    }
-    for (int i = 0; i < lengthA; i++) {
-        if (headA == headB) {
-            return headA;
-        }
-        headA = headA->next;
-        headB = headB->next;
-    }
+    if(!headA || !headB)
     return NULL;
+
+    struct ListNode *a = headA;
+    struct ListNode *b = headB;
+
+    while(a!=b) {
+        a = a ? a->next : headB;
+        b = b ? b->next : headA;
+    }
+    
+    return a;
 }
 
 void logList(struct ListNode *head) {
