@@ -9,26 +9,27 @@
 using namespace std;
 
 class Solution {
-public:
-    int strStr(string haystack, string needle) {
-        for(int i = 0; i < haystack.size(); ++i){
-            if(needle == haystack.substr(i, needle.size())) return i;
+    public:
+        int strStr(string haystack, string needle) {
+            for (int i = 0; i < haystack.size(); ++i) {
+                if (needle == haystack.substr(i, needle.size())) return i;
+            }
+            return -1;
         }
-        return -1;
-    }
 };
 int main() {
-    string haystack{"sadbutsad"}; 
+    string haystack{"sadbutsad"};
     string needle{"sad"};
     int k = Solution().strStr(haystack, needle);
 
-    cout << "Output: "<< k << endl;
-    
+    cout << "Output: " << k << endl;
+
     return 0;
 };
 
 /*
-Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+Given two strings needle and haystack, return the index of the first occurrence
+of needle in haystack, or -1 if needle is not part of haystack.
 */
 /*
 Constraints:

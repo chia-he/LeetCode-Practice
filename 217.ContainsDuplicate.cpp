@@ -13,25 +13,25 @@
 
 using namespace std;
 
-class Solution{
-public:
-    bool containsDuplicate(vector<int>& nums) {
-        unordered_map<int, int> mp;
-        for(int n: nums){
-            if(++mp[n] >= 2)
-                return true;
+class Solution {
+    public:
+        bool containsDuplicate(vector<int>& nums) {
+            unordered_map<int, int> mp;
+            for (int n : nums) {
+                if (++mp[n] >= 2) return true;
+            }
+            return false;
         }
-        return false;
-    }
 };
-int main(void){
-    vector<int> nums{1,1};
+int main(void) {
+    vector<int> nums{1, 1};
     int ans = Solution().containsDuplicate(nums);
     cout << ans << endl;
     return 0;
 };
 /*
-Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+Given an integer array nums, return true if any value appears at least twice in
+the array, and return false if every element is distinct.
 */
 /*
 Constraints:
