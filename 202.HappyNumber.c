@@ -12,7 +12,7 @@
 int squareSum(int n) {
     int num = n;
     int ans = 0;
-
+    // split the digit and sum of their square
     while (num > 0) {
         int remainder = num % 10;
         ans += remainder * remainder;
@@ -24,15 +24,13 @@ int squareSum(int n) {
 bool isHappy(int n) {
     int slow = n;
     int fast = n;
-    // use slow fast pointer to check if cycle exists.
+    // Floyd's tortoise and hare.
     do {
         slow = squareSum(slow);
         fast = squareSum(squareSum(fast));
-        // Happy number
-        if (slow == 1 || fast == 1) return true;
-    } while (slow != fast);
-    // cycle exists.
-    return false;
+    } while ((slow != fast) && (fast != 1));
+    // cycle not exists.
+    return fast == 1;
 }
 bool isHappy_bruteforce(int n) {
     int ans = 0;
