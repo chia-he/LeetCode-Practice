@@ -9,7 +9,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\Executable File\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\Executable Files\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "C:/msys64/ucrt64/bin"
